@@ -4,6 +4,7 @@ import com.codeborne.selenide.SelenideElement;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import ru.netology.testmode.data.DataGenerator;
 
 import java.lang.module.Configuration;
 import java.util.concurrent.locks.Condition;
@@ -51,7 +52,7 @@ class AuthTest {
         $("[data-test-id= 'login'] input").setValue(blockedUser.getLogin());
         $("[data-test-id= 'password'] input").setValue(blockedUser.getPassword());
         $("[data-test-id= 'action-login']").click();
-        $("[class= 'notification__content']").shouldHave(com.codeborne.selenide.Condition.text("Ошибка! Пользователь заблакирован"));
+        $("[class= 'notification__content']").shouldHave(com.codeborne.selenide.Condition.text("Ошибка! Пользователь заблокирован"));
 
     }
 

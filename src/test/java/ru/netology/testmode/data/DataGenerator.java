@@ -37,7 +37,7 @@ public class DataGenerator {
     }
 
     public static String getRandomLogin() {
-        String login =faker.name().username();
+        String login = faker.name().username();
         return login;
     }
 
@@ -51,7 +51,7 @@ public class DataGenerator {
         }
 
         public static RegistrationDto getUser(String status) {
-           RegistrationDto user = new RegistrationDto(getRandomLogin(),getRandomPassword(),status);
+            RegistrationDto user = new RegistrationDto(getRandomLogin(), getRandomPassword(), status);
             return user;
         }
 
